@@ -279,7 +279,8 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/sn100x
+    vendor/nxp/opensource/sn100x \
+    hardware/google/pixel
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -351,6 +352,22 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
+# QTI common
+TARGET_COMMON_QTI_COMPONENTS := \
+    alarm \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    init \
+    nfc \
+    overlay \
+    perf \
+    telephony \
+    usb \
+    vibrator \
+    wlan
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -394,7 +411,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
-    hardware/google/pixel \
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -404,9 +420,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_COPY_FILES += \
